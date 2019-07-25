@@ -1,0 +1,39 @@
+﻿CREATE TABLE Accounts
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Username VARCHAR,
+	Salt VARCHAR,
+	Hash VARCHAR
+)
+
+
+-- TODO: Create Index: UserId, Priviledge
+
+CREATE TABLE AccessPriviledgesRegistry
+(
+	UserId INT,
+	Priviledge INT
+)
+
+ALTER TABLE AccessPriviledgesRegistry
+ADD CONSTRAINT fk_AccessPriviledgesRegistry_UserId_Accounts_Id
+FOREIGN KEY (UserId)
+REFERENCES Accounts(Id)
+
+
+-- TODO: Add or remove columns base on requirements
+
+CREATE TABLE Consumers
+(
+	UserId INT,
+	Firstname VARCHAR,
+	MiddleName VARCHAR,
+	Lastname VARCHAR,
+	Email VARCHAR,
+	Birthdate DATE
+)
+
+ALTER TABLE Consumers
+ADD CONSTRAINT fk_Consumers_UserId_Accounts_Id
+FOREIGN KEY (UserId)
+REFERENCES Accounts(Id)
