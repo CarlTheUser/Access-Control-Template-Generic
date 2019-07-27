@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessControl", "AccessCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerIdentity", "ConsumerIdentity\ConsumerIdentity.csproj", "{33FBE818-B67C-44AC-B145-88E5D74D162D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessControl.Demo", "AccessControl.Demo\AccessControl.Demo.csproj", "{F92095CF-B6D8-4EFA-947D-C944A693EF2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33FBE818-B67C-44AC-B145-88E5D74D162D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33FBE818-B67C-44AC-B145-88E5D74D162D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33FBE818-B67C-44AC-B145-88E5D74D162D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92095CF-B6D8-4EFA-947D-C944A693EF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92095CF-B6D8-4EFA-947D-C944A693EF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92095CF-B6D8-4EFA-947D-C944A693EF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92095CF-B6D8-4EFA-947D-C944A693EF2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

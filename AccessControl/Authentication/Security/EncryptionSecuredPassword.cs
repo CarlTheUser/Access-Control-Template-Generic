@@ -51,7 +51,7 @@ namespace AccessControl.Authentication.Security
                 }
             }
 
-            return mismatched;
+            return !mismatched;
         }
 
         private HashedPassword Restore(string password, byte[] salt)
@@ -64,7 +64,8 @@ namespace AccessControl.Authentication.Security
 
             Array.Copy(salt, 0, hashedPassword, 0, SALT_SIZE);
 
-            Array.Copy(hash, SALT_SIZE, hashedPassword, SALT_SIZE, HASH_SIZE);
+            //Array.Copy(hash, SALT_SIZE, hashedPassword, SALT_SIZE, HASH_SIZE);
+            Array.Copy(hash, 0, hashedPassword, SALT_SIZE, HASH_SIZE);
 
             return new HashedPassword(salt, hashedPassword);
         }
